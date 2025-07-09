@@ -80,37 +80,77 @@
   box-shadow: 0 2px 12px #191414;
 }
 
+/* Base link style remains untouched */
 .nav-link {
-  flex-shrink: ;
   border-radius: 8px;
   border-width: 0;
   font-family: 'Gotham-Medium';
   padding: 10px 15px;
   color: #FFFFFF;
   text-decoration: none;
-  /**background: linear-gradient(145deg, #1a1a1a, #191414);**/
   transition: all 0.3s ease;
-  font-family: Gotham-Medium;
-}
-/* Shrinked version */
-.nav-link.shrink {
-  padding: 10px 1px;
 }
 
-/* Responsive tweaks for small screens */
-@media screen and (max-width: 600px) {
-  .nav-link {
-    padding: 10px 15px;
+/* Active link highlight */
+.nav-link-active {
+  background-color: #2b2b2b;
+  border-bottom: 2px solid cyan;
+}
+
+/* Container for the navbar */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #111;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Hamburger (hidden by default) */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Link group */
+.links {
+  display: flex;
+  gap: 10px;
+}
+
+/* Responsive behavior for small screens */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
   }
 
-  .nav-link li {
-    font-size: 14px;
+  .links {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px 20px;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
   }
 
-  .nav-link ul {
-    gap: 10px;
-    flex-wrap: nowrap; /* force horizontal display */
-    overflow-x: auto;
+  .links.open {
+    display: flex;
+  }
+
+  .nav-link,
+  .nav-link-active {
+    width: 100%;
+    padding: 12px;
+    text-align: left;
   }
 }
 
@@ -322,7 +362,7 @@
   font-family: 'Gotham-Black';
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-content: center;
   padding: 5px;
   background-color: #191414;
   color: #FFFFFF;

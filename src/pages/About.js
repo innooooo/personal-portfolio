@@ -11,7 +11,7 @@ const About = () => {
       <Parallax speed={10} translateY={[-20, 20]}>
         <h1 className="section-title">Who I Am</h1>
       </Parallax>
-      <img style={{width:'500px',height:'350px'}} src='/images/me.jpg'/>
+      <img style={{width:'500px',height:'350px'}} src='/images/me.JPG'/>
 
       <p className="section-text">
         Hi! I'm <strong>Innocent Koge</strong>, a frontend developer who codes with creativity, precision, and speed — just like a midfield maestro on match day.
