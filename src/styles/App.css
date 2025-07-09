@@ -81,6 +81,7 @@
 }
 
 .nav-link {
+  flex-shrink: ;
   border-radius: 8px;
   border-width: 0;
   font-family: 'Gotham-Medium';
@@ -91,6 +92,28 @@
   transition: all 0.3s ease;
   font-family: Gotham-Medium;
 }
+/* Shrinked version */
+.nav-link.shrink {
+  padding: 10px 1px;
+}
+
+/* Responsive tweaks for small screens */
+@media screen and (max-width: 600px) {
+  .nav-link {
+    padding: 10px 15px;
+  }
+
+  .nav-link li {
+    font-size: 14px;
+  }
+
+  .nav-link ul {
+    gap: 10px;
+    flex-wrap: nowrap; /* force horizontal display */
+    overflow-x: auto;
+  }
+}
+
 
 .nav-link:hover {
   font-family: 'Gotham-Medium_1';
