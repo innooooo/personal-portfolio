@@ -478,3 +478,19 @@
 .secondary-btn:hover {
   background-color: #e0ecff;
 }
+
+.responsive-photo {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px; /* optional */
+  display: block;
+  margin: 0 auto; /* centers image */
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .responsive-photo {
+    max-width: 300px; /* shrink on mobile */
+  }
+}
