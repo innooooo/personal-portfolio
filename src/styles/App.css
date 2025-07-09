@@ -1,0 +1,417 @@
+@font-face {
+    font-family: "Gotham-Black";
+    src: url(../assets/Gotham-Black.otf);
+}
+@font-face {
+    font-family: "Gotham-Bold";
+    src: url(../assets/Gotham-Bold.otf))
+}
+@font-face {
+    font-family: "Gotham-BookItalic";
+    src: url(../assets/Gotham-BookItalic.otf);
+}
+@font-face {
+    font-family: "Gotham-Light";
+    src: url(../assets/Gotham-Light.otf);
+}
+@font-face {
+    font-family: "Gotham-Thin";
+    src: url(../assets/Gotham-Thin.otf);
+}
+@font-face {
+    font-family: "Gotham-ThinItalic";
+    src: url(../assets/Gotham-ThinItalic.otf);
+}
+@font-face {
+    font-family: "Gotham-UltraItalic";
+    src: url(../assets/Gotham-UltraItalic.otf);
+}
+@font-face {
+    font-family: "Gotham-XLight";
+    src: url(../assets/Gotham-XLight.otf);
+}
+@font-face {
+    font-family: "Gotham-XLightItalic";
+    src: url(../assets/Gotham-XLightItalic.otf);
+}
+@font-face {
+    font-family: "Gotham-Bold";
+    src: url(../assets/GothamBold.ttf);
+}
+@font-face {
+    font-family: "Gotham-BoldItalic";
+    src: url(../assets/GothamBoldItalic.ttf);
+}
+@font-face {
+    font-family: "Gotham-Book";
+    src: url(../assets/GothamBook.ttf);
+}
+@font-face {
+    font-family: "Gotham-BookItalic";
+    src: url(../assets/GothamBookItalic.ttf);
+}
+@font-face {
+    font-family: "Gotham-Light";
+    src: url(../assets/GothamLight.ttf);
+}
+@font-face {
+    font-family: "Gotham-LightItalic";
+    src: url(../assets/GothamLightItalic.ttf);
+}
+@font-face {
+    font-family: "Gotham-Medium_1";
+    src: url(../assets/GothamMedium_1.ttf);
+}
+@font-face {
+    font-family: "Gotham-Medium";
+    src: url(../assets/GothamMedium.ttf);
+}
+@font-face {
+    font-family: "Gotham-MediumItalic";
+    src: url(../assets/GothamMediumItalic.ttf);
+}
+
+.links {
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+  padding: 20px;
+  background-color: #191414;
+  box-shadow: 0 2px 12px #191414;
+}
+
+.nav-link {
+  border-radius: 8px;
+  border-width: 0;
+  font-family: 'Gotham-Medium';
+  padding: 10px 15px;
+  color: #FFFFFF;
+  text-decoration: none;
+  /**background: linear-gradient(145deg, #1a1a1a, #191414);**/
+  transition: all 0.3s ease;
+  font-family: Gotham-Medium;
+}
+
+.nav-link:hover {
+  font-family: 'Gotham-Medium_1';
+  animation: pulse-glow 1.7s ease-in-out infinite;
+  transform: translateY(-3px);
+  box-shadow: 4px 4px 12px #0a0a0a, -4px -4px 12px #2a2a2a;
+  color: #00ff88;
+}
+
+.nav-link-active {
+  font-size: larger;
+  color: #00ff88;
+  font-family: 'Gotham-Bold';
+  transform: translateY(-3px);
+  border-radius: 8px;
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 10px 4px rgba(0, 255, 136, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px 8px rgba(0, 255, 136, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 10px 4px rgba(0, 255, 136, 0.3);
+  }
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../assets/stadium-background.jpg);
+  color: #FFFFFF;
+  font-family: 'Gotham-Bold';
+  text-align: center; background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content > * {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  animation: bounceIn 1.7s ease forwards;
+  opacity: 0;
+}
+
+.slide-in-left {
+  animation-name: slideLeftBounce;
+  animation-delay: 0.9s;
+}
+
+.slide-in-right {
+  animation-name: slideRightBounce;
+  animation-delay: 0.9s;
+}
+
+.slide-in-up {
+  animation-name: slideUpBounce;
+  animation-delay: 0.9s;
+}
+
+@keyframes slideLeftBounce {
+  0% {
+    transform: translateX(-100%) scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(10%) scale(1.05);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRightBounce {
+  0% {
+    transform: translateX(100%) scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(-10%) scale(1.05);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpBounce {
+  0% {
+    transform: translateY(100%) scale(1);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-10%) scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5) translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.skills-section {
+  background-color: #191414;
+  color: #FFFFFF;
+  padding: 5px;
+  margin: auto;
+  font-family: 'Gotham-Black';
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.skills-subtitle {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.tech-stack {
+  animation: popIn 1.5s forwards;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-around;
+}
+
+.tech-category {
+  flex: 1 1 220px;
+  min-width: 220px;
+}
+
+.tech-heading {
+  font-size: 1.5rem;
+  color: #00ff88;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.icon-wrapper:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+  transition: filter 0.3s ease;
+  
+}
+
+.icon-wrapper:hover .icon {
+  fill: #DB7210;
+}
+
+.label {
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.frameworks {
+  margin-top: 60px;
+  padding: 0 20px;
+}
+.contacts{
+  height: 100vh;
+  font-family: 'Gotham-Black';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  background-color: #191414;
+  color: #FFFFFF;
+}
+.projects{
+  height:100%;
+  color: #FFFFFF;
+  background-color: #191414;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+.project-card{
+  cursor:pointer;
+  height: 320px;
+  width:100%;
+  max-width: 340px;
+  margin-left:15px;
+  padding: 5px;
+  border-radius: 14px;
+}
+.project-card:hover{
+  animation: pulse-glow 1.2s infinite;
+}
+.project-img{
+  width:100%;
+  height:70%;
+  border-radius: 14px;
+}
+.project-description{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.about{
+  height: 100%;
+  font-family: 'Gotham-Black';
+  padding: 5px 20px;
+  background-color: #191414;
+  color: #FFFFFF;
+}
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section-text {
+  font-family: 'Gotham-Light';
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.section-quote {
+  font-family: 'Gotham-LightItalic';
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.typing-container {
+  font-family: 'Gotham-Thin';
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #00ff88;
+  height: 40px;
+  margin-bottom: 50px;
+}
+
+.cta-section {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.cta-text {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 5px 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+
+.primary-btn {
+  background-color: #00ff88;
+  color: white;
+  border: none;
+}
+
+.primary-btn:hover {
+  background-color: #00ff8852;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: #00ff88;
+  border: 2px solid #00ff88;
+}
+
+.secondary-btn:hover {
+  background-color: #e0ecff;
+}
