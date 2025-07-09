@@ -7,9 +7,7 @@ const Navbar = () => {
   return (
     <>
       <div className='navbar-container'>
-        <div className='logo'>Inno</div>
-
-        <div className='hamburger' onClick={() => setIsOpen(!isOpen)}>
+       <div className='hamburger' onClick={() => setIsOpen(!isOpen)}>
           ☰
         </div>
 
