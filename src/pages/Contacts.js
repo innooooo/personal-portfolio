@@ -132,7 +132,7 @@ const Contacts = () => {
               cursor: 'pointer',
               filter: 'brightness(0) saturate(100%) invert(100%)',
             }}
-            src="/icons/twitter.svg"
+            src="/icons/x.svg"
             alt="My Twitter"
           />
         </a>
