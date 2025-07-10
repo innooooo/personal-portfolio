@@ -129,7 +129,7 @@ const Contacts = () => {
             
             style={{
               margin: '9px',
-              width:'40px',
+              width:'30px',
               cursor: 'pointer',
               filter: 'brightness(0) saturate(100%) invert(100%)',
             }}
