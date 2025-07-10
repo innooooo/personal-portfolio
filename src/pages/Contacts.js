@@ -126,9 +126,10 @@ const Contacts = () => {
 
         <a href="https://x.com/theinnocent001" target="_blank" rel="noopener noreferrer">
           <img
-            className="animated-icon"
+            
             style={{
               margin: '9px',
+              width:'40px',
               cursor: 'pointer',
               filter: 'brightness(0) saturate(100%) invert(100%)',
             }}
