@@ -300,7 +300,7 @@ function App() {
       </div>
 
       <div id="projects" style={{color: "white",background: "linear-gradient(180deg, rgba(26, 26, 46, 0.95) 0%, #1A1A2E 100%)",padding:"10px 0px"}}>
-        <h1 style={{paddingLeft: "20px"}}>Projects</h1>
+        <h2 style={{paddingLeft: "20px"}}>Swipe to view more projects</h2>
         <div className="projects">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />
