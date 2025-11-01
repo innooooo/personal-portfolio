@@ -130,7 +130,7 @@ html {
     bottom: 0;
     left: 0;
     right: 0;
-    width: fit-content;
+    width: 80%;
    
     border-radius: 20px;
     border: none;
@@ -141,7 +141,7 @@ html {
   }
 
   .links {
-    width: 100%;
+    width: 60vh;
     justify-content: center;
     gap: 0;
     font-size: small;
@@ -163,7 +163,7 @@ html {
   /* Show icons on mobile */
   .nav-icon {
     display: block;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1;
   }
 
@@ -172,7 +172,6 @@ html {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 100%;
   }
 
   /* Active button styling for mobile */
@@ -825,7 +824,7 @@ html {
   backdrop-filter: blur(24px);
   background-color: rgba(17, 17, 17, 0.3);
   border: 1px solid #8b5a9b;
-  width: 70vh;
+  width: 70%;
   height: auto;
   margin: 20px auto;
   padding: 20px;
