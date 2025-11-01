@@ -193,40 +193,41 @@ function App() {
   return (
     <div className="app">
       <div className='navbar-container'>
-        <div className='hamburger' onClick={() => setIsOpen(!isOpen)}>
-          ☰
-        </div>
-
-        <div className={`links ${isOpen ? 'open' : ''}`}>
+        <div className='links'>
           <button
             onClick={() => scrollToSection('home')}
             className={activeSection === 'home' ? 'btn primary-btn' : 'btn secondary-btn'}
           >
-            Home
+            <span className="nav-icon">🏠</span>
+            <span className="nav-label">Home</span>
           </button>
           <button
             onClick={() => scrollToSection('services')}
             className={activeSection === 'services' ? 'btn primary-btn' : 'btn secondary-btn'}
           >
-            Services
-          </button>
-          <button
-            onClick={() => scrollToSection('skills')}
-            className={activeSection === 'skills' ? 'btn primary-btn' : 'btn secondary-btn'}
-          >
-            Skills
+            <span className="nav-icon">💼</span>
+            <span className="nav-label">Services</span>
           </button>
           <button
             onClick={() => scrollToSection('projects')}
             className={activeSection === 'projects' ? 'btn primary-btn' : 'btn secondary-btn'}
           >
-            Projects
+            <span className="nav-icon">📱</span>
+            <span className="nav-label">Projects</span>
+          </button>
+          <button
+            onClick={() => scrollToSection('skills')}
+            className={activeSection === 'skills' ? 'btn primary-btn' : 'btn secondary-btn'}
+          >
+            <span className="nav-icon">⚡</span>
+            <span className="nav-label">Skills</span>
           </button>
           <button
             onClick={() => scrollToSection('contacts')}
             className={activeSection === 'contacts' ? 'btn primary-btn' : 'btn secondary-btn'}
           >
-            Reach out
+            <span className="nav-icon">📧</span>
+            <span className="nav-label">Reach out</span>
           </button>
         </div>
       </div>
@@ -265,10 +266,10 @@ function App() {
 
         <div className="highlights">
           <h3>Brands I've worked with</h3>
-          <div style={{display:"flex",justifyContent:"center",alignItems:"center",gap:"15px"}}>
+          <div>
             <div className="highlight1">
               <img
-                style={{height:"100px",width:"100px",borderRadius:"50%"}}
+                style={{height:"100px",width:"110px",borderRadius:"50%"}}
                 src="/icons/CONTINUITYLOGO.webp"
                 alt="Continuity Healthcare Management company logo"
               />
@@ -299,8 +300,8 @@ function App() {
         </div>
       </div>
 
-      <div id="projects" style={{color: "white",background: "linear-gradient(180deg, rgba(26, 26, 46, 0.95) 0%, #1A1A2E 100%)",padding:"10px 0px"}}>
-        <h2 style={{paddingLeft: "20px"}}>Swipe to view more projects</h2>
+      <div id="projects" style={{color: "white",background: "linear-gradient(180deg, rgba(26, 26, 46, 0.95) 0%, #1A1A2E 100%)"}}>
+        <h2 style={{padding: "20px 10px"}}>Swipe to view more projects</h2>
         <div className="projects">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />
@@ -320,7 +321,7 @@ function App() {
         </div>
       </div>
 
-      <div id='services' style={{display:"flex",flexDirection:"column",alignItems:"center",background:"linear-gradient(180deg, rgba(26, 26, 46, 0.95) 0%, #1A1A2E 100%)"}}>
+      <div id='services' style={{padding:"20px",display:"flex",flexDirection:"column",alignItems:"center",background:"linear-gradient(180deg, rgba(26, 26, 46, 0.95) 0%, #1A1A2E 100%)"}}>
         <div className="services">
           <h1>Services</h1>
           {services.map((service)=>(
@@ -329,7 +330,7 @@ function App() {
             </div>
           ))}
         </div>
-        <div>
+        <div style={{margin:"20px"}}>
           <a href="https://github.com/innooooo" target="_blank" rel="noopener noreferrer">
             <img
               className="animated-icon"
