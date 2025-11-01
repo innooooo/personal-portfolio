@@ -92,7 +92,7 @@ html {
   width: fit-content;
   display: flex;
   justify-self: center;
-  gap: 20px;
+  justify-content: space-evenly;
   -webkit-backdrop-filter: blur(24px);
   backdrop-filter: blur(24px);
   background-color: rgba(17, 17, 17, 0.3);
@@ -127,40 +127,54 @@ html {
 @media screen and (max-width: 768px) {
   .navbar-container {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 80%;
-   
-    border-radius: 20px;
-    border: none;
+    bottom: 12px; /* leaves space above submit button */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92%;        /* fits phones */
+    max-width: 500px;  /* avoids stretching on tablets */
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
     border: 1px solid #8b5a9b;
-    background-color: rgba(17, 17, 17, 0.7);
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+    background-color: rgba(17, 17, 17, 0.85);
+    backdrop-filter: blur(18px);
+
+    box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.4);
+    padding: 0;
     z-index: 1000;
   }
 
   .links {
-    width: 60vh;
-    justify-content: center;
-    gap: 0;
-    font-size: small;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 6px;
+    padding: 0 6px;
+    width: 100%;
+    height: fit-content;
   }
 
   .links button {
     flex: 1;
+    min-width: 0; /* prevents overflow */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4px;
-    padding: 8px 4px;
-    border-radius: 12px;
-    min-width: 0;
-    font-size: 11px;
+
+    gap: 2px;
+    padding: 6px 2px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    height:fit-content;
   }
 
-  /* Show icons on mobile */
   .nav-icon {
     display: block;
     font-size: 18px;
@@ -169,31 +183,34 @@ html {
 
   .nav-label {
     display: block;
+    font-size: 0.65rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
-  /* Active button styling for mobile */
   .links .primary-btn {
-    background: rgba(57, 255, 20, 0.15);
-  }
-
-  .links .primary-btn .nav-icon {
-    transform: scale(1.1);
+    background: rgba(57, 255, 20, 0.2);
   }
 }
 
+/* Tiny phones */
 @media screen and (max-width: 480px) {
   .links button {
-    font-size: 10px;
-    padding: 6px 2px;
+    padding: 4px 1px;
+    font-size: 0.6rem;
+    height: fit-content;
   }
 
   .nav-icon {
-    font-size: 18px;
+    font-size: 15px;
+  }
+
+  .nav-label {
+    font-size: 0.55rem;
   }
 }
+
 
 @keyframes pulse-glow {
   0% {
